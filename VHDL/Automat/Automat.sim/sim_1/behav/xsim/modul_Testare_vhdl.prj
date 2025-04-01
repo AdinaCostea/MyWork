@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Automat.srcs/sources_1/new/comp_beh.vhd" \
+"../../../../Automat.srcs/sources_1/new/counter.vhd" \
+"../../../../Automat.srcs/sources_1/new/mvf_A.vhd" \
+"../../../../Automat.srcs/sources_1/new/mvf_B.vhd" \
+"../../../../Automat.srcs/sources_1/new/mvf_C.vhd" \
+"../../../../Automat.srcs/sources_1/new/mvf_LD.vhd" \
+"../../../../Automat.srcs/sources_1/new/mvf_PT.vhd" \
+"../../../../Automat.srcs/sources_1/new/placuta.vhd" \
+"../../../../Automat.srcs/sources_1/new/modul_Testare.vhd" \
+
+# Do not sort compile order
+nosort
