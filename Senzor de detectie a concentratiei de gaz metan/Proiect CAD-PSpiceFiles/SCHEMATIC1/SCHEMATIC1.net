@@ -1,0 +1,28 @@
+* source PROIECT CAD
+R_Rdiv         N00155 +11  85k TC=0,0 
+R_Rs         N00155 0  45k TC=0,0 
+X_U1         N00155 N00107 +11 -11 N00107 uA741
+R_R3         N00107 N00305  1k TC=0,0 
+R_R4         0 N00305  4.02k TC=0,0 
+X_U2         N00305 N00481 +11 -11 N00541 uA741
+R_R1         VREF N00481  1k TC=0,0 
+R_R2         N00481 N00541  4.02k TC=0,0 
+X_U3         N00778 VREF +11 -11 VREF uA741
+R_Rs1         N00778 0  422 TC=0,0 
+R_Rdiv1         N00778 +11  1k TC=0,0 
+R_R10         N01008 0  3.48k TC=0,0 
+R_R8         N01008 +11  1k TC=0,0 
+X_U4         N01008 VREF2 +11 -11 VREF2 uA741
+R_Ri         VREF2 N01166  10k TC=0,0 
+R_Rr         N01166 N01241  42.2k TC=0,0 
+V_V1         +11 0 11
+V_V2         0 -11 11
+X_U5         N01166 N06384 +11 -11 N01241 AD820/AD
+Q_Q1         N03617 N03405 0 Q2N2222A/ZTX 
+R_Rb         +11 N03405  22.6k TC=0,0 
+R_Rreleu         N03617 +11  240 TC=0,0 
+R_Rled         N03617 N05493  475 TC=0,0 
+D_D1         N05493 +11 led_rosu 
+V_V3         N06384 0  
++SIN 0 11 1k 0 0 0
+.PARAM  r=45k

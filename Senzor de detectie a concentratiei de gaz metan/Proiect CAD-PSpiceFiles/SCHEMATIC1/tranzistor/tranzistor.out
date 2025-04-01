@@ -1,0 +1,205 @@
+
+**** 05/31/24 17:52:55 ***** PSpice 23.1.0 (6 March 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-tranzistor"  [ c:\users\coste\onedrive\desktop\cad\lab5-pspicefiles\proiect cad-PSpiceFiles\SCHEMATIC1\tranz
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "tranzistor.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\coste\OneDrive\Desktop\an2\sem2\workspace_orcad\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V4 -10 10 0.01 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT CAD
+R_Rdiv         N00155 +11  85k TC=0,0 
+R_Rs         N00155 0  55k TC=0,0 
+X_U1         N00155 N00107 +11 -11 N00107 uA741
+R_R3         N00107 N00305  1k TC=0,0 
+R_R4         0 N00305  4.02k TC=0,0 
+X_U2         N00305 N00481 +11 -11 N00541 uA741
+R_R1         VREF N00481  1k TC=0,0 
+R_R2         N00481 N00541  4.02k TC=0,0 
+X_U3         N00778 VREF +11 -11 VREF uA741
+R_Rs1         N00778 0  422 TC=0,0 
+R_Rdiv1         N00778 +11  1k TC=0,0 
+R_R10         N01008 0  3.48k TC=0,0 
+R_R8         N01008 +11  1k TC=0,0 
+X_U4         N01008 VREF2 +11 -11 VREF2 uA741
+R_Ri         VREF2 N01166  10k TC=0,0 
+R_Rr         N01166 N01241  42.2k TC=0,0 
+V_V1         +11 0 11
+V_V2         0 -11 11
+X_U5         N01166 N00541 +11 -11 N01241 AD820/AD
+Q_Q1         N03617 N03405 0 Q2N2222A/ZTX 
+R_R11         N04838 N03405  1k TC=0,0 
+R_R12         N03617 N03649  100 TC=0,0 
+V_V3         N04838 0 5V
+V_V4         N03649 0 10
+.PARAM  r=45k
+
+**** RESUMING tranzistor.cir ****
+.END
+
+**** 05/31/24 17:52:55 ***** PSpice 23.1.0 (6 March 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-tranzistor"  [ c:\users\coste\onedrive\desktop\cad\lab5-pspicefiles\proiect cad-PSpiceFiles\SCHEMATIC1\tranz
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         X_U2.dx         X_U2.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U3.dx         X_U3.dy         X_U4.dx         X_U4.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U5.DX         
+          IS    1.000000E-15 
+
+
+**** 05/31/24 17:52:55 ***** PSpice 23.1.0 (6 March 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-tranzistor"  [ c:\users\coste\onedrive\desktop\cad\lab5-pspicefiles\proiect cad-PSpiceFiles\SCHEMATIC1\tranz
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N2222A/ZTX    X_U1.qx         X_U2.qx         X_U3.qx         
+               NPN             NPN             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS   30.611000E-15  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  220              93.75           93.75           93.75         
+          NF    1.00124         1               1               1            
+         VAF  104                                                            
+         IKF     .52                                                         
+         ISE    7.500000E-15                                                 
+          NE    1.41                                                         
+          BR    4               1               1               1            
+          NR    1.005           1               1               1            
+         VAR   28                                                            
+         IKR     .24                                                         
+         ISC   10.652500E-12                                                 
+          NC    1.3728                                                       
+         ISS    0               0               0               0            
+          RB     .13                                                         
+          RE     .22            0               0               0            
+          RC     .12            0               0               0            
+         CJE   27.010000E-12    0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    9.120000E-12    0               0               0            
+         VJC     .4089           .75             .75             .75         
+         MJC     .3508           .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF  325.000000E-12                                                 
+          TR  100.000000E-09                                                 
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.42            2.42         
+           D     .87             .87             .87             .87         
+
+
+               X_U4.qx         X_U5.NPN        X_U5.PNP        
+               NPN             NPN             PNP             
+       LEVEL    1               1               1            
+          IS  800.000000E-18  100.000000E-18  100.000000E-18 
+          BF   93.75          120              80            
+          NF    1               1               1            
+         VAF                  150             150            
+          BR    1               1               1            
+          NR    1               1               1            
+         VAR                   15              15            
+         ISS    0               0               0            
+          RB                    2.000000E+03    2.000000E+03 
+          RE    0               4               4            
+          RC    0             200             900            
+         CJE    0               0               0            
+         VJE     .75             .75             .75         
+         CJC    0               0               0            
+         VJC     .75             .75             .75         
+         MJC     .33             .33             .33         
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.42            2.42            2.2          
+           D     .87             .87             .52         
+
+
+**** 05/31/24 17:52:55 ***** PSpice 23.1.0 (6 March 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-tranzistor"  [ c:\users\coste\onedrive\desktop\cad\lab5-pspicefiles\proiect cad-PSpiceFiles\SCHEMATIC1\tranz
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U5.JX         
+               NJF             
+         VTO   -2            
+        BETA  767.000000E-06 
+          IS    1.000000E-12 
+
+
+
+          JOB CONCLUDED
+
+**** 05/31/24 17:52:55 ***** PSpice 23.1.0 (6 March 2024) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-tranzistor"  [ c:\users\coste\onedrive\desktop\cad\lab5-pspicefiles\proiect cad-PSpiceFiles\SCHEMATIC1\tranz
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        1.67
+
