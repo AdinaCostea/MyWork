@@ -1,0 +1,70 @@
+@import url(https://fonts.google.com/);
+body {
+  background-color: #227ac1;
+  color: white;
+  font-size: 1em;
+  font-family: "Nunito", Arial, sans-serif;
+}
+
+main {
+  width: 100%;
+  background-color: #227ac1;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+}
+main h1 {
+  font-size: 1.5em;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  main {
+    display: flex;
+    margin-left: auto;
+    padding: 10px 10px;
+    text-align: center;
+  }
+}
+
+nav {
+  font-size: 1.8em;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 0;
+  background-color: #6fc0e6;
+}
+nav ul {
+  list-style-type: none;
+  padding: 10px;
+}
+nav ul li {
+  display: inline;
+  padding: 10px;
+  margin: 15px 0px;
+}
+@media (min-width: 1000px) {
+  nav ul li {
+    display: block;
+    padding: 5px;
+  }
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+nav ul li:hover {
+  background-color: #227ac1;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  background-color: #060832;
+  padding: 10px;
+  margin-top: 20px;
+  width: 97%;
+  font-size: 14px;
+}/*# sourceMappingURL=myStyles.css.map */

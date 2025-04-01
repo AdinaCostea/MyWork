@@ -1,0 +1,79 @@
+@mixin medium-screen() {
+    @media(max-width:1250px) {
+        @content;
+    }
+}
+
+@mixin small-screen() {
+    @media(max-width:750px) {
+        @content;
+    }
+}
+
+body {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+    .container {
+        border: 3px solid rgb(43, 110, 255);
+        border-radius: 20px;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+
+
+
+        &:hover {
+            background-color: #e95151;
+        }
+
+
+        header {
+            width: 100%;
+            background-color: rgb(30, 1, 160);
+            color: white;
+            font-size: 3rem;
+            border-radius: 17px;
+        }
+
+        .ceo {
+            display: flex;
+            align-items: center;
+            gap:20px;
+            padding:20px;
+            justify-content: space-between;
+
+            @include small-screen() {
+                display: block;
+            }
+
+            img {
+                width: 300px;
+               height: 25vh;
+               
+
+                @include medium-screen() {
+                    width: 250px;
+                   
+
+                }
+            }
+
+            p {
+                color: gray;
+            }
+
+            h1 {
+                font-size: 2rem;
+
+                @include medium-screen() {
+                    font-size: 2rem;
+
+                }
+            }
+
+        }
+    }
+}

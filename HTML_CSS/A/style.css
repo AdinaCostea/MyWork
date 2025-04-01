@@ -1,0 +1,46 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  background-color: rgb(252, 213, 241);
+}
+body h2 {
+  font-size: 2em;
+}
+@media (max-width: 900px) {
+  body h2 {
+    font-size: 0.8em;
+  }
+}
+body .name {
+  background-color: rgb(255, 182, 234);
+}
+body .name:hover {
+  background-color: lightcoral;
+}
+@media (max-width: 650px) {
+  body .name {
+    display: flex;
+  }
+}
+body .comment {
+  padding: 10px;
+}
+body img {
+  height: 200px;
+  width: 200px;
+}
+@media (max-width: 900px) {
+  body img {
+    height: 100px;
+    width: 100px;
+  }
+}
+body .container {
+  display: flex;
+  border: 2px solid gray;
+}
+@media (max-width: 650px) {
+  body .container {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,79 @@
+@import url(https://fonts.google.com/);
+
+:root {
+    --header-color: #3399ff;
+    --nav-hover: #0066ff;
+}
+
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    background-color: #cce6ff;
+}
+
+header {
+    background-color: var(--header-color);
+}
+
+#cLogo {
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px;
+    text-shadow: 2px 2px darkblue;
+
+}
+
+#cLogo:hover {
+    text-shadow: 2px 2px red;
+    /* schimba umbra in rosu */
+}
+
+.topMenu{
+    display:flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+
+}
+
+nav ul li:hover {
+    background-color: var(--nav-hover);
+    border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+    header {
+        background-color: #ff9933;
+    }
+
+    nav a:hover {
+        color: #ff6600;
+    }
+}
+
+
+
+@media (max-width: 800px) {
+    #cLogo {
+        display: none;
+    }
+}

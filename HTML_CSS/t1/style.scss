@@ -1,0 +1,85 @@
+@mixin medium-screen() {
+    @media(max-width:1000px) {
+        @content;
+    }
+}
+
+@mixin small-screen() {
+    @media(max-width:650px) {
+        @content;
+    }
+}
+
+body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @include small-screen() {
+        margin-left: 0;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .container {
+        width: 400px;
+        border: 3px solid #2f4cac;
+        border-radius: 20px;
+        display: grid;
+        padding-bottom: 10px;
+        align-items: center;
+        text-align: center;
+
+        @include medium-screen() {
+            width: 250px;
+        }
+
+        &:hover {
+            border: 3px solid #e95151;
+        }
+
+        .card-table {
+            font-size: 2em;
+            background-color: black;
+            color: white;
+            border-radius: 17px;
+            width: 100%;
+            padding: 10px 0px; //inaltime si latime
+            border-radius: 17px 17px 0 0;
+
+        }
+
+
+        img {
+            width: 300px;
+            margin: auto;
+
+            @include medium-screen() {
+                width: 200px;
+            }
+        }
+
+        h3,
+        h2 {
+            text-align: center;
+            font-size: 1.5em;
+            padding-top: 20px;
+        }
+
+        button {
+            display: block;
+            margin: auto;
+            text-align: center;
+            background-color: #2f4cac;
+            padding-top: 10px;
+            margin-bottom: 10px;
+            border: #2f4cac;
+            color: white;
+        }
+
+    }
+}

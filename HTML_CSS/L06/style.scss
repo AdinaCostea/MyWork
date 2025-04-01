@@ -1,0 +1,82 @@
+@mixin small-screen() {
+    @media(max-width:850px) {
+        @content;
+    }
+}
+
+//trebuie mod include
+@mixin xs-screen() {
+    @media(max-width:850px) {
+        @content;
+    }
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+
+
+    header {
+
+
+        background-color: rgb(65, 0, 65);
+        display: flex;
+        justify-content: center;
+
+        @include xs-screen() {
+            display: none;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+
+            @include small-screen() {
+                width: 85px;
+                height: 85px;
+            }
+
+        }
+
+        h1 {
+            font-size: 40px;
+            color: white;
+            margin-left: 40px;
+
+            @include small-screen() {
+                font-size: 2em;
+            }
+        }
+    }
+
+    .page-content {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+
+        @include xs-screen() {
+            //grid-template-columns: 1fr;
+            //sau
+            display: initial;
+        }
+
+        nav {
+            font-size: 3em;
+
+            @include small-screen() {
+                width: 85px;
+                height: 85px;
+            }
+
+            ul {
+                li {
+                    text-align: center;
+
+                    &:hover {
+                        background-color: violet;
+                    }
+                }
+            }
+        }
+
+    }
+
+}

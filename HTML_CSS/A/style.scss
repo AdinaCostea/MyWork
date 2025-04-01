@@ -1,0 +1,69 @@
+//Pentru ecranele mai mici de 900 pixeli, imaginile sunt reduse la 100 x 100 px, 
+//iar dimensiunea fontului numelor scade la 0,8 em
+@mixin small-screen() {
+    @media(max-width:900px) {
+        @content;
+    }
+}
+//Pentru ecranul mai mic de 650 px, imaginea și numele sunt afișate una lângă 
+//cealaltă și sunt plasate sub comentariu
+@mixin xs-screen(){
+    @media(max-width:650px){
+        @content;
+    }
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px; //dimensiune fontului pt comentarii
+    background-color: rgb(252, 213, 241); //background pt comentarii
+
+    h2 {
+        font-size: 2em; //dimensiunea fontului pt nume
+
+        @include small-screen() {
+            font-size: 0.8em;
+        }
+
+
+    }
+
+    .name {
+        background-color: rgb(255, 182, 234); //background pt nume
+
+        &:hover {
+            background-color: lightcoral;
+            //containerul cu imagine și nume își schimbă 
+            //culoarea de fundal în „lightcoral” atunci când mouse-ul este peste el
+
+        }
+        @include xs-screen(){
+            display: flex;
+        }
+    }
+
+    .comment {
+        //Comentariile au un padding de 10 pixeli pe toate partile
+        padding: 10px;
+
+    }
+
+    img {
+        //Imaginile sunt 200 x 200 px
+        height: 200px;
+        width: 200px;
+
+        @include small-screen() {
+            height: 100px;
+            width: 100px;
+        }
+
+    }
+
+    .container {
+        display: flex;
+        border: 2px solid gray;
+        @include xs-screen(){
+            display:block;
+        }
+    }
+}
