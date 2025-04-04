@@ -1,0 +1,44 @@
+/*Program care determina cel mai mic element dintr-un tablou
+unidimensional */
+//Costea Adina-Ioana,grupa 2114
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#define d 7
+int det(int v[], int n);
+int main()
+{
+	int n, v[d];
+	printf("\nIntroduceti dimensiunea tabloului (<=%d) ", d);
+	scanf("%d", &n);
+	if (n<0 || n>d)
+	{
+		printf("\nValoare incorecta");
+	}
+	printf("\nDati valori pt elementele tabloului:");
+	for (int i = 0; i < n; i++)
+	{
+		printf("v[%d]=", i);
+		scanf("%d", &v[i]);
+	}
+	printf("\nCel mai mic element al tabloului este:%d", det(v, n));
+	return 0;
+}
+int det(int v[], int n)
+{
+	int x[7], b, j;
+	for (j = n - 1; j >= 0; j--)
+	{
+		if (v[j] < v[0]) {
+			b = v[j];
+			v[j] = v[0];
+			v[0] = b;
+		}
+		if (v[j] > v[0]) {
+			b = v[0];
+			v[0] = v[j];
+			v[0] = b;
+		}
+	}
+	return b;
+
+}

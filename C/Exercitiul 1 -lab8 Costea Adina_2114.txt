@@ -1,0 +1,46 @@
+/*Program care determina valoarea mediea elementelor pozitive si ale celor negative
+dintr-un tablou unidimensional*/
+//Costea Adina-Ioana,grupa 2114
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#define d 7
+float neg(int v[], int n);
+float poz(int v[], int n);
+int main()
+{
+	int n;
+	int v[d];
+	printf("\nIntroduceti dimensiunea tabloului<=%d\n",d);
+	scanf("%d", &n);
+	if (n <= 0 || n > d)
+	{
+		printf("\nDimensiune incorecta");
+	}
+	printf("\n Introduceti elementele tabloului:");
+	for (int i = 0; i < n; i++)
+	{
+		printf("\t v[%d]=", i);
+		scanf("%d", &v[i]);
+	}
+	printf("\n Valoarea medie a nr pozitive este:%.2f", poz(v, n));
+	printf("\n Valloarea medie a nr negatuve este:%.2f", neg(v, n));
+	return 0;
+}
+float neg(int v[], int n)
+{
+	float sum=0;
+	for (int j = 0; j < n; j++)
+	{
+		if (v[j] < 0) sum = sum + v[j];
+	}
+	return sum / n;
+}
+float poz(int v[], int n)
+{
+	float s = 0;
+	for (int j = 0; j < n; j++)
+	{
+		if (v[j] > 0) s = s + v[j];
+	}
+	return s / n;
+}
