@@ -1,0 +1,39 @@
+//Costea Adina-Ioana,grupa 2114
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main()
+{
+	int i, j,a,b,ok,aux;
+	float m[5][5];
+	printf("\nDati valori pt elementele matricei");
+	for (i = 0; i < 5; i++)
+	
+		for ( j = 0; j < 5; j++)
+		{	printf("\nIntroduceti o valoare pt m[%d,%d]=", i, j);
+		scanf("%f", &m[i][j]);
+	}
+	
+	for (i = 0; i < 5; i++)
+	{
+		for (j = 0; j < 5; j++)
+			a = m[i][j] + m[i + 1][j];
+		b = m[i][j + 1] + m[i + 1][j + 1];
+		if (a > b) {
+			ok = m[i][j];
+			m[i][j] = m[i][j + 1];
+			m[i][j + 1] = ok;
+			aux = m[i + 1][j];
+			m[i + 1][j] = m[i + 1][j +1 ];
+			m[i + 1][j + 1] = aux;
+		}
+
+	}
+	for (i = 0; i < 5; i++)
+	{
+		for (j = 0; j < 5; j++)
+
+			printf("%.2f ", m[i][j]);
+		printf("\n");
+	}
+	return 0;
+}
