@@ -1,0 +1,95 @@
+(ExpressProject "CAD_PROIECT"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "23.1 S003 (4178961)  [3/6/2024]-[06/03/24]")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    ("Allegro Netlist Directory" "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\cad_proiect.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\cad_proiect-pspicefiles\schematic1\schematic1.net"
+      (Type "Report"))
+    (Sort User)
+    (File ".\CAD_PROIECT_OUTPUT\BOM.SCH.CSV"
+      (Type "Report")
+      (DisplayName ".\CAD_PROIECT_OUTPUT\BOM.SCH.CSV")))
+  (Folder "Referenced Projects")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\cad_proiect-pspicefiles\schematic1\analiza parametrica.sim"
+        (DisplayName "SCHEMATIC1-analiza parametrica")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\cad_proiect-pspicefiles\schematic1\tranzitorie.sim"
+        (DisplayName "SCHEMATIC1-tranzitorie")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\cad_proiect-pspicefiles\schematic1\monte carlo.sim"
+        (DisplayName "SCHEMATIC1-monte carlo")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\cad_proiect-pspicefiles\schematic1\worst case.sim"
+        (DisplayName "SCHEMATIC1-worst case")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\cad_proiect-pspicefiles\schematic1\test_liniaritate.sim"
+        (DisplayName "SCHEMATIC1-test_liniaritate")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\cad_proiect-pspicefiles\schematic1\monte carlo.sim"))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File
+         "C:\Users\coste\OneDrive\Desktop\cad\lab5-PSpiceFiles\Proiect CAD-PSpiceFiles\SCHEMATIC1\led_rosu.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName
+           "C:\Users\coste\OneDrive\Desktop\cad\lab5-PSpiceFiles\Proiect CAD-PSpiceFiles\SCHEMATIC1\led_rosu.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (Folder "Logs")
+  (PartMRUSelector
+    (0
+      (LibraryName "C:\CADENCE\ORCADX_23.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_23.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-L
+      (LibraryName "C:\CADENCE\ORCADX_23.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\CADENCE\ORCADX_23.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "c:\users\coste\onedrive\desktop\an2\sem2\workspace_orcad\cdssetup\workspace\projects\cad_proiect\cad_proiect.dsn")
+      (Path "Design Resources"
+         "c:\users\coste\onedrive\desktop\an2\sem2\workspace_orcad\cdssetup\workspace\projects\cad_proiect\cad_proiect.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "c:\users\coste\onedrive\desktop\an2\sem2\workspace_orcad\cdssetup\workspace\projects\cad_proiect\cad_proiect.dsn"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 539"))
+      (Tab 0)))
+  (MPSSessionName "coste"))
