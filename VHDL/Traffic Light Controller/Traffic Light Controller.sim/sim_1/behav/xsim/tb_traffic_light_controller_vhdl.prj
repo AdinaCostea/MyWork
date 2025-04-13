@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Traffic Light Controller.srcs/sources_1/new/traffic_light_controller.vhd" \
+"../../../../Traffic Light Controller.srcs/sim_1/new/tb_traffic_light_controller.vhd" \
+
+# Do not sort compile order
+nosort
