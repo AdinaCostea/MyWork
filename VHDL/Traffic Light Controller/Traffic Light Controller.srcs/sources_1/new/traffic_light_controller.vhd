@@ -146,6 +146,6 @@ begin
  end if;
 end process;
 
-clk_1s_enable <= '1' when counter_1s = x"0003" else '0'; -- Pentru testare. Pentru FPGA real: x"2FAF080"
+clk_1s_enable <= '1' when counter_1s = x"0003" else '0'; 
 
 end traffic_light;
